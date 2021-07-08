@@ -25,43 +25,52 @@ refresh();
 // creation de nouveau message au click sur Add
 document.getElementById('addmessage').addEventListener("click",
       function(){
-        // test sur la console
-        console.log('message reçu captain !!!')
 
-      // création des nouveaux éléments (div,p,h4..)
-        var newDiv = document.createElement("div");
-        var avat = document.createElement("img");
-        var newDiv1 = document.createElement("div");
-        var nomAuthor = document.createElement("h6");
-        var newP = document.createElement("p");
-        var bin = document.createElement("img");
+        if (document.getElementById('inputtext').value!= "" ) {
+          // test sur la console
+          console.log('message reçu captain !!!')
 
-      //récupération du contenue du message et nom de l'auteur
-        var saisie = document.getElementById('inputtext').value;
-        var idAuthor = 'Ortelli Francois';
+          // création des nouveaux éléments (div,p,h4..)
+          var newDiv = document.createElement("div");
+          var avat = document.createElement("img");
+          var newDiv1 = document.createElement("div");
+          var nomAuthor = document.createElement("h6");
+          var newP = document.createElement("p");
+          var bin = document.createElement("img");
 
-      // set attribut aux elements
-        newDiv.setAttribute("class", "row rowMessage");
-        avat.setAttribute("class", "avatar");
-        avat.setAttribute("src", "/ressource/avatar-4.jpg");
-        newDiv1.setAttribute("class", "textinfo");
-        nomAuthor.textContent= idAuthor;
-        newP.textContent= saisie;
-        bin.setAttribute("class", "poubelle");
-        bin.setAttribute("src", "/ressource/trash.png");
+          //récupération du contenue du message et nom de l'auteur
+          var saisie = document.getElementById('inputtext').value;
+          var idAuthor = 'Ortelli Francois';
 
-      // ajoute les element crées aux parents 
-        document.body.appendChild(newDiv);
-        newDiv.appendChild(avat)
-        newDiv.appendChild(newDiv1)
-        newDiv.appendChild(bin)
-        newDiv1.appendChild(nomAuthor)
-        newDiv1.appendChild(newP)
+          // set attribut aux elements
+          newDiv.setAttribute("class", "row rowMessage lastrow");
+          avat.setAttribute("class", "avatar");
+          avat.setAttribute("src", "/ressource/avatar-4.jpg");
+          newDiv1.setAttribute("class", "textinfo");
+          nomAuthor.textContent= idAuthor;
+          newP.textContent= saisie;
+          bin.setAttribute("class", "poubelle");
+          bin.setAttribute("src", "/ressource/trash.png");
 
-      //je recompte les messages et set les poubelles
-        refresh();
+          // ajoute les element crées aux parents 
+          document.body.appendChild(newDiv);
+          newDiv.appendChild(avat)
+          newDiv.appendChild(newDiv1)
+          newDiv.appendChild(bin)
+          newDiv1.appendChild(nomAuthor)
+          newDiv1.appendChild(newP)
 
-      // clear le champs de saisie
-      document.getElementById('inputtext').value = "";
+          //je recompte les messages et set les poubelles
+          refresh();
+
+          // clear le champs de saisie
+          document.getElementById('inputtext').value = "";
+
+          // décallage du last row pour avoir la bordure qui pas double.
+          document.getElementsByClassName('lastrow')[0].setAttribute("class", "row rowMessage");
+
+      } else { 
+        console.log("pas de message donc pas de post!")
+        }
     } 
-    )
+)

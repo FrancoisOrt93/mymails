@@ -4,11 +4,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #dadada;
-   
 }
+
 H4 {
     margin: 10px;
 }
+
 H6 {
     font-size: 14px;
     margin: 0;
@@ -26,6 +27,7 @@ p {
 .counter {
     margin-right: 300px;
 }
+
 .searchbar {
     width:80%;
     margin: 20px;
@@ -33,16 +35,19 @@ p {
     justify-content: left;
     align-items:center;
 }
+
 .button
 {
     margin-right: 15px;
     
 }
+
 .button:focus {
     outline:0;
     border-color: blue;
 
 }
+
 .row {
     display: flex;
     flex-direction: row;
@@ -57,10 +62,12 @@ p {
     border-width: thin;
     margin: 0px;
 }
+
 .messagecount {
     justify-content: left;
     align-items:center;
 }
+
 .lastrow {
     border-bottom: solid;
     border-width: thin;
@@ -83,6 +90,5 @@ margin: 40px;
     height: 60px;
     border-radius: 40px;
     margin: 20px;
-    ;
     }
 
