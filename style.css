@@ -42,7 +42,7 @@ p {
     
 }
 
-.button:focus {
+.button:hover {
     outline:0;
     border-color: blue;
 
