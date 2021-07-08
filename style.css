@@ -23,17 +23,25 @@ p {
     text-overflow: ellipsis;
 }
 
-.search {
-    display: flex;
-    flex-direction: row;
-    
-}
 .counter {
     margin-right: 300px;
 }
+.searchbar {
+    width:80%;
+    margin: 20px;
+    height: 30px;
+    justify-content: left;
+    align-items:center;
+}
 .button
 {
-    margin: 15px;
+    margin-right: 15px;
+    
+}
+.button:focus {
+    outline:0;
+    border-color: blue;
+
 }
 .row {
     display: flex;
@@ -48,6 +56,10 @@ p {
     border-left: solid;
     border-width: thin;
     margin: 0px;
+}
+.messagecount {
+    justify-content: left;
+    align-items:center;
 }
 .lastrow {
     border-bottom: solid;
